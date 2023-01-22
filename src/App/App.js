@@ -1,5 +1,7 @@
 import React, { useState } from 'react'
 import Login from '../login/login'
+import Quotes from './quotes'
+import EpicGames from './epicgames'
 
 export default function App() {
     const [logOut, setLogOut] = useState(false);
@@ -9,8 +11,13 @@ export default function App() {
     return (
         logOut?
         <Login />:
-        <div>
-            <button onClick={handleClick}>Log Out</button>
+        <div className='app'>
+            <Quotes />
+            <EpicGames />
+            <div class="footer">
+                <button onClick={handleClick}>Log Out</button>
+            </div>
         </div>
     )
 }
+    

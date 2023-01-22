@@ -2,7 +2,7 @@ import React, { useRef, useState } from 'react'
 import { initializeApp } from 'firebase/app'  
 import { getAuth, createUserWithEmailAndPassword} from 'firebase/auth'
 import Login from '../login/login'
-
+ 
 const firebaseConfig = {
     apiKey: "AIzaSyDUVFUdgapP0oVgpCWH-d1Dj5MEaacRkYA",
     authDomain: "authentication-9b59a.firebaseapp.com",
@@ -48,9 +48,7 @@ export default function SignUp() {
         setError('')
 
         createUserWithEmailAndPassword(auth, email, password)
-        .then((userCredential) => {
-            // const user = userCredential.user;
-            // console.log(user);
+        .then(() => {
             setError('Registered Successfully');
         })
         .catch(() => {
@@ -73,22 +71,26 @@ export default function SignUp() {
         showLoginPage?
         <Login />:
         <div className='container'>
+            <h1>Sign Up</h1>
             <div class="container--content">
-                <div className='inputField'>
-                    <input ref={emailRef} placeholder="Email ID" required></input>
+                <div className='inputField--div'>
+                    <input className='inputField' ref={emailRef} placeholder="Email ID" required></input>
                 </div>
-                <div className='inputField'>
-                    <input type="password" ref={passwordRef} placeholder="Password" required></input>
+                <div className='inputField--div'>
+                    <input className='inputField' type="password" ref={passwordRef} placeholder="Password" required></input>
                 </div>
-                <div className='inputField'>
-                    <input type="password" ref={confirmPasswordRef} placeholder="Confirm Password" required></input>
+                <div className='inputField--div'>
+                    <input className='inputField' type="password" ref={confirmPasswordRef} placeholder="Confirm Password" required></input>
                 </div>
-                <button className='inputField signUp' onClick={handleClick}>SignUp</button>
-                <div className='inputField goToLogin'>
+				<button className='inputField btn-navigate' onClick={handleClick}>SignUp</button>
+                <div className='inputField goTo'>
                     <p>Already a user?</p>
                     <button onClick={onLoginClick}>Login</button>
                 </div>
-                {showErrors()}
+                <hr></hr>
+                <div class="message">
+                    {showErrors()}
+                </div>
             </div>
         </div>
   )

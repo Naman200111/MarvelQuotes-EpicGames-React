@@ -1,28 +1,155 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+
 * {
     padding: 0;
     margin: 0;
 }
 
+*,::before,::after{
+    box-sizing: border-box;
+}
+
+html, body, #root{ 
+    width: 100%;
+    height: 100%;
+}
+
+body{
+    font-size: 18px;
+    font-family: 'Inter', sans-serif;
+}
+
 .container {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(186, 234, 218);
+    width: 100%;
+    height: 100%;
 }
 
-.container--content {
-    margin: 3em;
-}
-
-.inputField {
+.container--content{
+    background-color: rgb(250, 250, 99);
+    padding: 5em 1.5em 2em;
+    min-width: 25%;
     margin: 1em;
+    border-radius: 15px;
 }
 
-.goToSignUp {
-    display: flex;
+.inputField{
+    padding: 1em 1.5em;
+    border-radius: 5px;
+    border: none;
+    width: 80%;
+    margin: 0 auto 2em auto;
+    display: block;
 }
 
+.inputField:focus {
+    box-shadow: inset 1.5px 1.5px 0.5px 0.5px grey;
+    outline:none;
+}
 
-.goToLogin {
+button {
+    background-color: rgb(97, 97, 164);
+    color: white;
+    transition-duration: 0.2s;
+}
+
+button:hover{
+    background-color: white;
+    color: black;
+}
+
+button:active{
+    box-shadow: inset 2px 2px 2px 0.5px grey;
+}
+
+.btn-navigate {
+    padding: 0.75em;
+    max-width: 45%;
+    margin: 1em auto;
+    display: block;
+    font-size: 1em;
+}
+
+.goTo {
     display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: center;
+    margin-bottom: 1em;
+}
+
+.goTo p{
+    margin-right: 0.25em;
+    padding: 0.75em;
+    font-size: 0.75em;
+}
+
+.goTo button{
+    border-radius: 5px;
+    padding: 0.5em 1em;
+    border: none;
+    font-size: 0.9em;
+}
+
+.message{
+    margin: 0 auto;
+    text-align: center;
+    font-size: 1.125em;
+}
+
+hr{
+    margin: 1em ;
+}
+
+/* app css */
+/* .app{
+    display: flex;
+    justify-content: center;
+} */
+.quotes{
+    min-height: 50vh;
+    background-color: aquamarine;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.quotes--content{
+    width: 70%;
+}
+.epic-games{
+    min-height: 40vh;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.epic-games--content{
+    width: 70%;
+}
+.footer{
+    min-height: 10vh;
+    background-color: coral;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@media (max-width: 385px) {
+    .container--content{
+        padding: 5em 0em 2em;
+    }
+    .goTo{
+        padding: 1em 0.25em;
+    }
+    .goTo p{
+        margin: 0;
+        padding: 0.25em;
+        text-align: center;
+    }
 }

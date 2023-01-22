@@ -41,8 +41,7 @@ export default function Login() {
         }
 
         signInWithEmailAndPassword(auth, email, password)
-        .then((userCredential) => {
-            // const user = userCredential.user;
+        .then(() => {
             setShowApp(true)
             setError('');
         })
@@ -63,21 +62,20 @@ export default function Login() {
         showApp?
         <App />:
         <div className='container'>
-            <div className='inputField'>
-                {/* <p>Email</p> */}
-                <input ref={emailRef} placeholder="Email ID"></input>
+            <h1>Log In</h1>
+            <div class="container--content">
+                <div class="inputField--div"><input className='inputField' ref={emailRef} placeholder="Email ID"></input></div>
+                <div class="inputField--div"><input className='inputField' type="password" ref={passwordRef} placeholder="Password"></input></div>
+                <button className='inputField btn-navigate' onClick={handleLogin}>Login</button>
+                <div className='inputField goTo'>
+                    <p>Not already a user?</p>
+                    <button onClick={handleClick}>Sign Up</button>
+                </div>
+                <hr></hr>
+                <div class="message">
+                    {renderError()}
+                </div>
             </div>
-            <div className='inputField'>
-                {/* <p>Password</p> */}
-                <input type="password" ref={passwordRef} placeholder="Password"></input>
-            </div>
-            <button className='login' onClick={handleLogin}>Login</button>
-
-            <div className='goToSignUp'>
-                <p>Not already a user?</p>
-                <button onClick={handleClick}>Sign Up</button>
-            </div>
-            {renderError()}
         </div>
   )
 }
