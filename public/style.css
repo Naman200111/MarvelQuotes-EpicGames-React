@@ -15,7 +15,6 @@ html, body, #root{
 }
 
 body{
-    font-size: 18px;
     font-family: 'Inter', sans-serif;
 }
 
@@ -57,13 +56,13 @@ button {
     transition-duration: 0.2s;
 }
 
-button:hover{
+/* button:hover{
     background-color: white;
     color: black;
-}
+} */
 
 button:active{
-    box-shadow: inset 2px 2px 2px 0.5px grey;
+    box-shadow: inset 2px 2px 2px 0.5px rgb(59, 55, 55);
 }
 
 .btn-navigate {
@@ -106,24 +105,58 @@ hr{
 }
 
 /* app css */
-/* .app{
-    display: flex;
-    justify-content: center;
-} */
-.quotes{
-    min-height: 50vh;
-    background-color: aquamarine;
+.app{
     display: flex;
     flex-direction: column;
+}
+.quotes{
+    min-height: 50vh;
+    background-color: rgb(232, 179, 239);
+    display: flex;
     justify-content: center;
     align-items: center;
 }
-.quotes--content{
-    width: 70%;
+
+.quotes--container {
+    width: 60%;
+    background-color: rgb(230, 220, 220);
+    margin: 2em 0em;
+    display: flex;
+    justify-content: center;
 }
+.quotes--content{
+    padding: 2em;
+    max-width: 80%;
+    
+}
+.quote-desc{
+    font-size: 1.25em;
+}
+.quote--img{
+    padding: 1em 0em;
+}
+.quote-author{
+    text-align: right;
+    padding-top: 2em;
+    font-size: 1em;
+}
+.quote-movie{
+    text-align: right;
+    padding-bottom: 1em;
+    font-size: 1em;
+    font-weight: bold;
+}
+.next-quote{
+    display: block;
+    margin: 1em auto 0em;
+    padding: 1em;
+    border-radius: 10px;
+    border: none;
+}
+
 .epic-games{
-    min-height: 40vh;
-    background-color: black;
+    min-height: 50vh;
+    /* background-color: black; */
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -132,6 +165,19 @@ hr{
 .epic-games--content{
     width: 70%;
 }
+
+.current{
+    display: flex;
+    flex-direction: column;
+}
+.content{
+    display: flex;
+}
+.game-image{
+    object-fit: cover;
+    height: 100px;
+}
+
 .footer{
     min-height: 10vh;
     background-color: coral;
@@ -140,9 +186,51 @@ hr{
     align-items: center;
 }
 
+.footer button{
+    display: block;
+    margin: 1em auto;
+    padding: 1em;
+    border-radius: 10px;
+    border: none;
+}
+
+@media (max-width: 850px) {
+    .quote-author{
+        padding-top: 1.5em;
+    }
+    .quotes--container{
+        width: 80%;
+    }
+    .quotes--content{
+        min-width: 80%;
+    }
+}
+
+@media (max-width: 620px) {
+    .quote-author{
+        font-size: 0.8em;
+    }
+    .quote-movie{
+        font-size: 0.8em;
+    }
+    .quote-desc{
+        font-size: 1em;
+    }
+    .quotes--content{
+        max-width: 90%;
+    }
+}
+
+
 @media (max-width: 385px) {
     .container--content{
         padding: 5em 0em 2em;
+    }
+    .quotes--content{
+        max-width: 100%;
+    }
+    .quotes--container{
+        width: 90%;
     }
     .goTo{
         padding: 1em 0.25em;
@@ -152,4 +240,7 @@ hr{
         padding: 0.25em;
         text-align: center;
     }
+    
 }
+
+
