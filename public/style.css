@@ -18,6 +18,14 @@ body{
     font-family: 'Inter', sans-serif;
 }
 
+img{
+    max-width: 100%;
+}
+
+hr{
+    margin: 3em;
+}
+
 .container {
     display: flex;
     flex-direction: column;
@@ -163,20 +171,42 @@ hr{
     align-items: center;
 }
 .epic-games--content{
-    width: 70%;
+    margin: 2em;
+    max-width: 60%;
 }
 
-.current{
-    display: flex;
-    flex-direction: column;
+.game-section{
+    font-weight: bold;
 }
+
 .content{
     display: flex;
+    /* gap: 1em; */
+    margin: 0.5em 0em 2.5em;
+    justify-content: space-between;
 }
+
+.content-data{
+    max-width: 60%;
+}
+
+.title{
+    font-weight: bold;
+    margin: 0.5em 0em;
+}
+
 .game-image{
+    width: 200px;
     object-fit: cover;
-    height: 100px;
 }
+
+.game-data{
+    margin-bottom: 2em;
+}
+/* .game-section{
+    font-weight: bold;
+    margin: 1.75em 0em 0.75em;
+} */
 
 .footer{
     min-height: 10vh;
@@ -194,6 +224,12 @@ hr{
     border: none;
 }
 
+@media (max-width: 1000px) {
+    .epic-games--content{
+        max-width: 70%;
+    }
+}
+
 @media (max-width: 850px) {
     .quote-author{
         padding-top: 1.5em;
@@ -203,6 +239,9 @@ hr{
     }
     .quotes--content{
         min-width: 80%;
+    }
+    .epic-games--content{
+        max-width: 80%;
     }
 }
 
@@ -219,8 +258,29 @@ hr{
     .quotes--content{
         max-width: 90%;
     }
+    .epic-games--content{
+        max-width: 100%;
+    }
+    .game-data{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .content {
+        flex-direction: column;
+        align-items: center;
+        gap: 2em;
+    }
+    .content-data {
+        max-width: 100%;
+    }
+    .game-image{
+        width: 100%;
+    }
+    hr{
+        margin: 2em;
+    }
 }
-
 
 @media (max-width: 385px) {
     .container--content{
@@ -240,7 +300,12 @@ hr{
         padding: 0.25em;
         text-align: center;
     }
-    
+    hr{
+        margin: 1em;
+    }
+    .game-data{
+        margin: 0;
+    };
 }
 
 

@@ -1,34 +1,42 @@
 import React from "react";
+import Data from "./data";
 
 export default function Epicgames() {
-  const contents = (
-    <div className="content">
-      <div className="content-data">
-        <p className="title">Epistory - Typing Chronicles</p>
-        <p className="validity">2023-01-19</p>
-        <p className="description">
-          Epistory immerses you in an atmospheric game where you play a girl
-          riding a giant fox who fights an insectile corruption from an origami
-          world. As you progress and explore this world, the story literally
-          unfolds and the mysteries of the magic power of the words are
-          revealed.
-        </p>
-        <p className="price">Rs1499</p>
-      </div>
-      <img
-        src="https://cdn1.epicgames.com/spt-assets/2fe270709f944fc398851454cf476f95/epistory--typing-chronicles-19b5z.png"
-        alt="game-image"
-        className="game-image"
-      ></img>
-    </div>
-  );
+  function contents(filData) {
+    const ArrayfilData = Object.entries(filData);
+    const games = ArrayfilData.map(function (item) {
+      return (
+        <div className="content" key={item[1].id}>
+          <div className="content-data">
+            <p className="title">{item[1].title}</p>
+            <p className="validity">{item[1].effectiveDate}</p>
+            <p className="description">{item[1].description}</p>
+            <p className="price">Rs{item[1].price.totalPrice.originalPrice}</p>
+          </div>
+          <img
+            src={item[1].keyImages[0].url}
+            alt="free-game"
+            className="game-image"
+          ></img>
+        </div>
+      );
+    });
+    return games;
+  }
 
   return (
     <div className="epic-games">
       <div className="epic-games--content">
         <div className="free-epic-games">
-          <div className="current">{contents}</div>
-          <div className="upcoming"></div>
+          <div className="game-data">
+            <p className="game-section">Current Free Available Games</p>
+            {contents(Data.freeGames.current)}
+          </div>
+          <hr></hr>
+          <div className="game-data">
+            <p className="game-section">Upcoming Free Available Games</p>
+            {contents(Data.freeGames.upcoming)}
+          </div>
         </div>
       </div>
     </div>
