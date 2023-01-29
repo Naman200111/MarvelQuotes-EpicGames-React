@@ -78,7 +78,6 @@ export default function SignUp() {
             className="inputField"
             ref={emailRef}
             placeholder="Email ID"
-            required
           ></input>
         </div>
         <div className="inputField--div">
@@ -87,7 +86,6 @@ export default function SignUp() {
             type="password"
             ref={passwordRef}
             placeholder="Password"
-            required
           ></input>
         </div>
         <div className="inputField--div">
