@@ -71,42 +71,30 @@ export default function SignUp() {
     <Login />
   ) : (
     <div className="container">
-      <h1>Sign Up</h1>
-      <div class="container--content">
-        <div className="inputField--div">
-          <input
-            className="inputField"
-            ref={emailRef}
-            placeholder="Email ID"
-          ></input>
-        </div>
-        <div className="inputField--div">
-          <input
-            className="inputField"
-            type="password"
-            ref={passwordRef}
-            placeholder="Password"
-          ></input>
-        </div>
-        <div className="inputField--div">
-          <input
-            className="inputField"
-            type="password"
-            ref={confirmPasswordRef}
-            placeholder="Confirm Password"
-            required
-          ></input>
-        </div>
-        <button className="inputField btn-navigate" onClick={handleClick}>
-          SignUp
-        </button>
-        <div className="inputField goTo">
-          <p>Already a user?</p>
-          <button onClick={onLoginClick}>Login</button>
-        </div>
-        <hr></hr>
-        <div class="message">{showErrors()}</div>
-      </div>
-    </div>
+		<h1>Sign Up</h1>
+		<div class="container--content">
+			<div className="inputField--div">
+			<input className="inputField" ref={emailRef} placeholder="Email ID"></input>
+			</div>
+			<div className="inputField--div">
+			<input className="inputField" type="password" ref={passwordRef} placeholder="Password"></input>
+			</div>
+			<div className="inputField--div">
+			<input className="inputField" type="password" ref={confirmPasswordRef} placeholder="Confirm Password"></input>
+			</div>
+			<button 
+				className="inputField btn-navigate" 
+				onClick={handleClick}
+			>
+				SignUp
+			</button>
+			<div className="inputField goTo">
+			<p>Already a user?</p>
+			<button onClick={onLoginClick}>Login</button>
+			</div>
+			<hr></hr>
+			<div class="message">{showErrors()}</div>
+		</div>
+	</div>
   );
 }

@@ -5,24 +5,27 @@
     margin: 0;
 }
 
-*,::before,::after{
+*,
+::before,
+::after {
     box-sizing: border-box;
 }
- 
-html, body, #root{ 
-    width: 100%;
+
+html,
+body,
+#root {
     height: 100%;
 }
 
-body{
+body {
     font-family: 'Inter', sans-serif;
 }
 
-#root{
-    background: linear-gradient(to right, rgb(114, 237, 118), rgb(229, 107, 128));
+#root {
+    background: linear-gradient(45deg, rgb(48 239 54), rgb(247 75 105))
 }
 
-img{
+img {
     max-width: 100%;
 }
 
@@ -31,30 +34,28 @@ img{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 100%;
     height: 100%;
 }
 
-.container--content{
+.container--content {
     background-color: rgb(139 229 93);
-    padding: 5em 1.5em 2em;
-    min-width: 25%;
+    padding: 4em 1.5em 2em;
     margin: 1em;
     border-radius: 15px;
 }
 
-.inputField{
+.inputField {
     padding: 1em 1.5em;
     border-radius: 5px;
     border: none;
-    width: 80%;
+    width: 85%;
     margin: 0 auto 2em auto;
     display: block;
 }
 
 .inputField:focus {
     box-shadow: inset 1.5px 1.5px 0.5px 0.5px grey;
-    outline:none;
+    outline: none;
 }
 
 button {
@@ -63,7 +64,7 @@ button {
     transition-duration: 0.2s;
 }
 
-button:active{
+button:active {
     box-shadow: inset 2px 2px 2px 0.5px rgb(59, 55, 55);
 }
 
@@ -71,7 +72,6 @@ button:active{
     padding: 0.75em;
     max-width: 45%;
     margin: 1em auto;
-    display: block;
     font-size: 1em;
 }
 
@@ -83,35 +83,36 @@ button:active{
     margin-bottom: 1em;
 }
 
-.goTo p{
+.goTo p {
     margin-right: 0.25em;
     padding: 0.75em;
     font-size: 0.75em;
 }
 
-.goTo button{
+.goTo button {
     border-radius: 5px;
     padding: 0.5em 1em;
     border: none;
     font-size: 0.9em;
 }
 
-.message{
+.message {
     margin: 0 auto;
     text-align: center;
     font-size: 1.125em;
 }
 
-hr{
+hr {
     margin: 1.5em;
 }
 
 /* app css */
-.app{
+.app {
     display: flex;
     flex-direction: column;
 }
-.quotes{
+
+.quotes {
     min-height: 50vh;
     background-color: rgb(218 35 22);
     display: flex;
@@ -126,29 +127,35 @@ hr{
     display: flex;
     justify-content: center;
 }
-.quotes--content{
+
+.quotes--content {
     padding: 2em;
     max-width: 80%;
-    
+
 }
-.quote-desc{
+
+.quote-desc {
     font-size: 1.25em;
 }
-.quote--img{
+
+.quote--img {
     padding: 1em 0em;
 }
-.quote-author{
+
+.quote-author {
     text-align: right;
     padding-top: 2em;
     font-size: 1em;
 }
-.quote-movie{
+
+.quote-movie {
     text-align: right;
     padding-bottom: 1em;
     font-size: 1em;
     font-weight: bold;
 }
-.next-quote{
+
+.next-quote {
     display: block;
     margin: 1em auto 0em;
     padding: 1em;
@@ -159,11 +166,11 @@ hr{
 
 
 
-.free-epic-games{
+.free-epic-games {
     padding: 0 2em;
 }
 
-.epic-games{
+.epic-games {
     min-height: 50vh;
     display: flex;
     flex-direction: column;
@@ -171,76 +178,78 @@ hr{
     align-items: center;
     background-color: black;
 }
-.epic-games--content{
+
+.epic-games--content {
     margin: 2em 0em;
     max-width: 60%;
-    background-color: rgb(230, 220, 220);;
+    background-color: rgb(230, 220, 220);
+    ;
 }
 
-.game-section{
+.game-section {
     font-weight: bold;
     text-align: center;
     margin: 1em 0 2em;
     font-size: 1.25em;
 }
 
-.content{
+.content {
     display: flex;
     gap: 1em;
     margin: 0.5em 0em 2.5em;
     justify-content: space-between;
 }
 
-.content-data{
+.content-data {
     max-width: 60%;
 }
 
-.content-header{
+.content-header {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
     margin-bottom: 1em;
 }
 
-.content-footer{
+.content-footer {
     display: flex;
     justify-content: space-between;
 }
 
-.offerType{
+.offerType {
     font-weight: bold;
     text-decoration: underline;
 }
 
 
-.title{
+.title {
     margin-right: 1em;
     font-weight: bold;
 }
 
-.description{
+.description {
     margin-bottom: 0.75em;
 }
 
-.game-image{
+.game-image {
     width: 200px;
     object-fit: cover;
     margin-bottom: 1em;
 }
 
-.game-data{
+.game-data {
     margin-bottom: 2em;
 }
 
-.footer{
+.footer {
     min-height: 10vh;
-    background: linear-gradient(to right,#f01515 70%,#1a1717);
+    background: linear-gradient(to right, #f01515 70%, #1a1717);
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.footer button{
+.footer button {
     padding: 0.75em;
     border-radius: 10px;
     border: none;
@@ -248,93 +257,111 @@ hr{
 }
 
 @media (max-width: 1000px) {
-    .epic-games--content{
+    .epic-games--content {
         max-width: 70%;
     }
 }
 
 @media (max-width: 850px) {
-    .quote-author{
+    .quote-author {
         padding-top: 1.5em;
     }
-    .quotes--container{
+
+    .quotes--container {
         width: 80%;
     }
-    .quotes--content{
+
+    .quotes--content {
         min-width: 80%;
     }
-    .epic-games--content{
+
+    .epic-games--content {
         max-width: 80%;
     }
 }
 
 @media (max-width: 620px) {
-    .quote-author{
+    .quote-author {
         font-size: 0.8em;
     }
-    .quote-movie{
+
+    .quote-movie {
         font-size: 0.8em;
     }
-    .quote-desc{
+
+    .quote-desc {
         font-size: 1em;
     }
-    .quotes--content{
+
+    .quotes--content {
         max-width: 90%;
     }
-    .epic-games--content{
+
+    .epic-games--content {
         max-width: 90%;
     }
-    .game-data{
+
+    .game-data {
         display: flex;
         flex-direction: column;
         align-items: center;
     }
+
     .content {
         flex-direction: column;
         align-items: center;
         gap: 2em;
     }
+
     .content-data {
         max-width: 100%;
     }
-    .game-image{
+
+    .game-image {
         width: 100%;
     }
+
     /* hr{
         margin: 2em;
     } */
 }
 
 @media (max-width: 385px) {
-    .container--content{
+    .container--content {
         padding: 5em 0em 2em;
     }
-    .quotes--content{
+
+    .quotes--content {
         max-width: 100%;
     }
-    .quotes--container{
+
+    .quotes--container {
         width: 90%;
     }
-    .goTo{
+
+    .goTo {
         padding: 1em 0.25em;
     }
-    .goTo p{
+
+    .goTo p {
         margin: 0;
         padding: 0.25em;
         text-align: center;
     }
-    hr{
+
+    hr {
         margin: 0.5em;
     }
-    .game-data{
+
+    .game-data {
         margin: 0;
     }
-    .free-epic-games{
+
+    .free-epic-games {
         padding: 0 1em;
     }
-    .container--content{
+
+    .container--content {
         width: 80%;
     }
 }
-
-
