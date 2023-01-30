@@ -44,6 +44,7 @@ export default function Login() {
 		.then(() => {
 			setShowApp(true);
 			setError("");
+			window.localStorage.setItem("isLoggedIn", true)
 		})
 		.catch(() => {
 			setError("Invalid Credentials");

@@ -5,8 +5,10 @@ import EpicGames from "./epicgames";
 
 export default function App() {
   const [logOut, setLogOut] = useState(false);
+  
   function handleClick() {
     setLogOut(true);
+    window.localStorage.removeItem("isLoggedIn");
   }
   return logOut ? (
     <Login />
