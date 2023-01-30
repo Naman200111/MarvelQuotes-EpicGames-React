@@ -1,5 +1,5 @@
 import React, { useState, useRef } from "react";
-import SignUp from "../signUp/SignUp";
+import SignUp from "../signUp/signUp";
 import { initializeApp } from "firebase/app";
 import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
 import App from "../App/App";

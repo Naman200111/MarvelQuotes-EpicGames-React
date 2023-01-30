@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import Login from "../login/Login";
-import Quotes from "./Quotes";
-import EpicGames from "./Epicgames";
+import Login from "../login/login";
+import Quotes from "./quotes";
+import EpicGames from "./epicgames";
 
 export default function App() {
   const [logOut, setLogOut] = useState(false);

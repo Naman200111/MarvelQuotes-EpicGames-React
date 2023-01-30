@@ -1,7 +1,7 @@
 import React, { useRef, useState } from "react";
 import { initializeApp } from "firebase/app";
 import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
-import Login from "../login/Login";
+import Login from "../login/login";
 
 const firebaseConfig = {
   apiKey: "AIzaSyDUVFUdgapP0oVgpCWH-d1Dj5MEaacRkYA",
