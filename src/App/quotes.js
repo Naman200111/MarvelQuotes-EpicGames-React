@@ -46,6 +46,19 @@ export default function Quotes() {
           <p className="quote-desc">{desc}</p>
           <p className="quote-author">{author}</p>
           <p className="quote-movie">{movie}</p>
+          <p>
+            If you are not seeing any quotes above, then the API must be down.
+            Check this for more details:
+          </p>
+          <p>
+            <a href="https://rapidapi.com/kyledeguzmanx/api/marvel-quote-api">
+              API Link
+            </a>
+          </p>
+          <p>
+            <a href="https://marvel-quote-api.p.rapidapi.com/">Fetch Link</a>
+          </p>
+          {/* {errorMessage ? <p>{errorMessage}</p> : null} */}
           <button className="next-quote" onClick={handleClick}>
             Next-Quote
           </button>
